@@ -1,0 +1,11 @@
+<platform xmlns="http://ns.adobe.com/air/extension/4.0">
+	<packagedDependencies>
+@JARS@
+	</packagedDependencies>
+	<packagedResources>
+	     <packagedResource>
+		    <packageName>com.distriqt.extension.jobscheduler</packageName> 
+		    <folderName>com.distriqt.extension.jobscheduler-res</folderName> 
+		</packagedResource>
+	</packagedResources>
+</platform>

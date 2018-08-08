@@ -1,0 +1,23 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+	<id>com.distriqt.JobScheduler</id>
+	<versionNumber>@VERSION@</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>com.distriqt.extension.jobscheduler.jar</nativeLibrary>
+				<initializer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</initializer>
+				<finalizer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-x86">
+			<applicationDeployment>
+				<nativeLibrary>com.distriqt.extension.jobscheduler.jar</nativeLibrary>
+				<initializer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</initializer>
+				<finalizer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default"> 
+			<applicationDeployment /> 
+		</platform>
+	</platforms>
+</extension>
