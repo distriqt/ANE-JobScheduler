@@ -58,6 +58,7 @@ package com.distriqt.extension.jobscheduler
 		// Singleton variables
 		private static var _instance				: JobScheduler;
 		private static var _shouldCreateInstance	: Boolean = false;
+		
 		protected var _extensionId			: String = "";
 		protected var _extensionIdNumber	: int = -1;
 		
@@ -132,6 +133,7 @@ package com.distriqt.extension.jobscheduler
 		{
 			return VERSION_DEFAULT;
 		}
+		
 		
 		public function get implementation():String
 		{

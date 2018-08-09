@@ -228,7 +228,13 @@ package com.distriqt.extension.jobscheduler
 		//
 		//
 		
-		
+		/**
+		 * Schedule a job to terminate the application in the specified delay.
+		 *
+		 * @param delay	Delay in milliseconds until the application will be terminated
+		 *
+		 * @return <code>true</code> if successfully scheduled
+		 */
 		public function scheduleTermination( delay:int ):Boolean
 		{
 			try
@@ -242,6 +248,11 @@ package com.distriqt.extension.jobscheduler
 		}
 		
 		
+		/**
+		 * Cancel any previously scheduled application terminations.
+		 *
+		 * @return <code>true</code> if successfully cancelled.
+		 */
 		public function cancelTermination():Boolean
 		{
 			try
