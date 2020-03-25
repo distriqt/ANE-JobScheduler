@@ -90,9 +90,9 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/marchbold/work/distriqt/extensions/opensource/jobscheduler/source/platform/android/app/libs/FlashRuntimeExtensions.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/marchbold/work/distriqt/extensions/opensource/jobscheduler/source/platform/android/app/libs/runtimeClasses.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/marchbold/work/distriqt/extensions/opensource/jobscheduler/source/platform/android/app/libs/corenativeextension.android.lib.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/marchbold/work/distriqt/extensions/opensource/jobscheduler/source/platform/android/app/libs/corenativeextension.android.lib.air.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:./app/libs/FlashRuntimeExtensions.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:./app/libs/runtimeClasses.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:./app/libs/corenativeextension.android.lib.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:./app/libs/corenativeextension.android.lib.air.jar:unspecified@jar" level="project" />
   </component>
 </module>
