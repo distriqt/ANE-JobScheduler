@@ -1,30 +1,33 @@
-<extension xmlns="http://ns.adobe.com/air/extension/4.0">
-	<id>com.distriqt.JobScheduler</id>
+<extension xmlns="http://ns.adobe.com/air/extension/@AIRVERSION@">
+	<id>@EXTENSIONID@</id>
 	<versionNumber>@VERSION@</versionNumber>
 	<platforms>
+
 		<platform name="Android-ARM">
 			<applicationDeployment>
-				<nativeLibrary>com.distriqt.extension.jobscheduler.jar</nativeLibrary>
-				<initializer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</initializer>
-				<finalizer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</finalizer>
+				<nativeLibrary>@ANDROIDLIB@</nativeLibrary>
+				<initializer>@ANDROIDEXTINIT@</initializer>
+				<finalizer>@ANDROIDEXTFINAL@</finalizer>
 			</applicationDeployment>
 		</platform>
 		<platform name="Android-ARM64">
 			<applicationDeployment>
-				<nativeLibrary>com.distriqt.extension.jobscheduler.jar</nativeLibrary>
-				<initializer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</initializer>
-				<finalizer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</finalizer>
+				<nativeLibrary>@ANDROIDLIB@</nativeLibrary>
+				<initializer>@ANDROIDEXTINIT@</initializer>
+				<finalizer>@ANDROIDEXTFINAL@</finalizer>
 			</applicationDeployment>
 		</platform>
 		<platform name="Android-x86">
 			<applicationDeployment>
-				<nativeLibrary>com.distriqt.extension.jobscheduler.jar</nativeLibrary>
-				<initializer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</initializer>
-				<finalizer>com.distriqt.extension.jobscheduler.JobSchedulerExtension</finalizer>
+				<nativeLibrary>@ANDROIDLIB@</nativeLibrary>
+				<initializer>@ANDROIDEXTINIT@</initializer>
+				<finalizer>@ANDROIDEXTFINAL@</finalizer>
 			</applicationDeployment>
 		</platform>
+
 		<platform name="default"> 
 			<applicationDeployment /> 
 		</platform>
+		
 	</platforms>
 </extension>
