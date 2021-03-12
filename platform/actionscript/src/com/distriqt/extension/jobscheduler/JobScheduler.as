@@ -1,21 +1,20 @@
 /**
- *        __       __               __ 
+ *        __       __               __
  *   ____/ /_ ____/ /______ _ ___  / /_
  *  / __  / / ___/ __/ ___/ / __ `/ __/
- * / /_/ / (__  ) / / /  / / /_/ / / 
- * \__,_/_/____/_/ /_/  /_/\__, /_/ 
- *                           / / 
- *                           \/ 
+ * / /_/ / (__  ) / / /  / / /_/ / /
+ * \__,_/_/____/_/ /_/  /_/\__, /_/
+ *                           / /
+ *                           \/
  * http://distriqt.com
  *
  * @brief  		JobScheduler Native Extension
- * @author 		Michael Archbold
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		Aug 3, 2018
  * @copyright	http://distriqt.com/copyright/license.txt
  */
 package com.distriqt.extension.jobscheduler
 {
-	import flash.events.Event;
 	import flash.events.ErrorEvent;
 	import flash.events.EventDispatcher;
 	import flash.events.StatusEvent;
@@ -129,7 +128,7 @@ package com.distriqt.extension.jobscheduler
 		 *
 		 * @throws Error If there was a problem creating or accessing the extension, or if the key is invalid
 		 */
-		public static function init( key:String="" ):void
+		public static function init( key:String = "" ):void
 		{
 			createInstance();
 		}

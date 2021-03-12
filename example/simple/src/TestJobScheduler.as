@@ -6,12 +6,11 @@ package
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
-	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	
 	
-	/**	
+	/**
 	 * Sample application for using the JobScheduler Native Extension
 	 */
 	public class TestJobScheduler extends Sprite
@@ -21,7 +20,7 @@ package
 		//	VARIABLES
 		//
 		
-		private var _text		: TextField;
+		private var _text:TextField;
 		
 		
 		//
@@ -59,14 +58,15 @@ package
 			}
 			catch (e:Error)
 			{
-				message( "ERROR::"+e.message );
+				message( "ERROR::" + e.message );
 			}
 		}
+		
 		
 		private function message( str:String ):void
 		{
 			trace( str );
-			_text.appendText(str+"\n");
+			_text.appendText( str + "\n" );
 		}
 		
 		
@@ -76,7 +76,7 @@ package
 		
 		private function stage_resizeHandler( event:Event ):void
 		{
-			_text.width  = stage.stageWidth;
+			_text.width = stage.stageWidth;
 			_text.height = stage.stageHeight - 100;
 		}
 		
@@ -93,7 +93,7 @@ package
 			// Schedule termination
 			JobScheduler.instance.scheduleTermination( 5000 );
 		}
-
+		
 		
 	}
 	

@@ -9,7 +9,7 @@
  * http://distriqt.com
  *
  * @brief  		Version function implementation for this ANE
- * @author 		Michael Archbold (ma@distriqt.com)
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		Apr 10, 2012
  * @copyright	http://distriqt.com/copyright/license.txt
  *

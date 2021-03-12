@@ -9,7 +9,7 @@
  * http://distriqt.com
  *
  * @brief
- * @author marchbold
+ * @author Michael Archbold (https://github.com/marchbold)
  * @created 05/08/2018
  * @copyright http://distriqt.com/copyright/license.txt
  */

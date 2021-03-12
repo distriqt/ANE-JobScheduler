@@ -9,7 +9,7 @@
  * http://distriqt.com
  *
  * @brief  		Implementation function implementation for the Compass ANE
- * @author 		Michael Archbold (ma@distriqt.com)
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		Apr 10, 2012
  * @copyright	http://distriqt.com/copyright/license.txt
  *

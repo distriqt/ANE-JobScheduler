@@ -1,16 +1,16 @@
 /**
- *        __       __               __ 
+ *        __       __               __
  *   ____/ /_ ____/ /______ _ ___  / /_
  *  / __  / / ___/ __/ ___/ / __ `/ __/
- * / /_/ / (__  ) / / /  / / /_/ / / 
- * \__,_/_/____/_/ /_/  /_/\__, /_/ 
- *                           / / 
- *                           \/ 
+ * / /_/ / (__  ) / / /  / / /_/ / /
+ * \__,_/_/____/_/ /_/  /_/\__, /_/
+ *                           / /
+ *                           \/
  * http://distriqt.com
  *
  * @file   		Main.as
- * @brief  		
- * @author 		"Michael Archbold (ma&#64;distriqt.com)"
+ * @brief
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		08/01/2016
  * @copyright	http://distriqt.com/copyright/license.txt
  */
@@ -29,8 +29,9 @@ package com.distriqt.test.jobscheduler
 	import starling.text.TextFormat;
 	import starling.utils.Color;
 	
-	/**	
-	 * 
+	
+	/**
+	 *
 	 */
 	public class Main extends Sprite implements ILogger
 	{
@@ -43,10 +44,10 @@ package com.distriqt.test.jobscheduler
 		//	VARIABLES
 		//
 		
-		private var _tests		: JobSchedulerTests;
+		private var _tests:JobSchedulerTests;
 		
-		private var _container	: ScrollContainer;
-		private var _text		: TextField;
+		private var _container:ScrollContainer;
+		private var _text:TextField;
 		
 		
 		////////////////////////////////////////////////////////
@@ -66,9 +67,9 @@ package com.distriqt.test.jobscheduler
 		
 		public function log( tag:String, message:String ):void
 		{
-			trace( tag+"::"+message );
+			trace( tag + "::" + message );
 			if (_text)
-				_text.text = tag+"::"+message + "\n" + _text.text ;
+				_text.text = tag + "::" + message + "\n" + _text.text;
 		}
 		
 		
@@ -93,10 +94,10 @@ package com.distriqt.test.jobscheduler
 			_container.y = 50;
 			_container.layout = layout;
 			_container.width = stage.stageWidth;
-			_container.height = stage.stageHeight-50;
+			_container.height = stage.stageHeight - 50;
 			
 			_tests = new JobSchedulerTests( this );
-
+			
 			addAction( "Schedule :Termination", _tests.scheduleTermination );
 			addAction( "Cancel :Termination", _tests.cancelTermination );
 			
@@ -110,19 +111,18 @@ package com.distriqt.test.jobscheduler
 		{
 			var b:Button = new Button();
 			b.label = label;
-			b.addEventListener( starling.events.Event.TRIGGERED, listener );
+			b.addEventListener( Event.TRIGGERED, listener );
 			_container.addChild( b );
 		}
-		
 		
 		
 		////////////////////////////////////////////////////////
 		//	EVENT HANDLERS
 		//
 		
-		protected function addedToStageHandler(event:Event):void
+		protected function addedToStageHandler( event:Event ):void
 		{
-			removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler );
+			removeEventListener( Event.ADDED_TO_STAGE, addedToStageHandler );
 			new MetalWorksMobileTheme();
 			createUI();
 		}

@@ -1,27 +1,24 @@
 /**
- *        __       __               __ 
+ *        __       __               __
  *   ____/ /_ ____/ /______ _ ___  / /_
  *  / __  / / ___/ __/ ___/ / __ `/ __/
- * / /_/ / (__  ) / / /  / / /_/ / / 
- * \__,_/_/____/_/ /_/  /_/\__, /_/ 
- *                           / / 
- *                           \/ 
+ * / /_/ / (__  ) / / /  / / /_/ / /
+ * \__,_/_/____/_/ /_/  /_/\__, /_/
+ *                           / /
+ *                           \/
  * http://distriqt.com
  *
  * @brief  		JobScheduler Native Extension
- * @author 		Michael Archbold
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		Aug 3, 2018
  * @copyright	http://distriqt.com/copyright/license.txt
  */
 package com.distriqt.extension.jobscheduler
 {
-	import flash.events.ErrorEvent;
-	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	
 	
-	
-	/**	
+	/**
 	 * <p>
 	 * This class represents the JobScheduler extension.
 	 * </p>
@@ -39,15 +36,14 @@ package com.distriqt.extension.jobscheduler
 		private static const EXT_ID_NUMBER:int = -1;
 		
 		public static const VERSION:String = Const.VERSION;
-		private static const VERSION_DEFAULT		: String = "0";
-		private static const IMPLEMENTATION_DEFAULT	: String = "unknown";
+		private static const VERSION_DEFAULT:String = "0";
+		private static const IMPLEMENTATION_DEFAULT:String = "unknown";
 		
 		
 		//
 		//	Error Messages
-		private static const ERROR_CREATION			: String = "The native extension context could not be created";
-		private static const ERROR_SINGLETON		: String = "The extension has already been created. Use ExtensionClass.service to access the functionality of the class";
-		
+		private static const ERROR_CREATION:String = "The native extension context could not be created";
+		private static const ERROR_SINGLETON:String = "The extension has already been created. Use ExtensionClass.service to access the functionality of the class";
 		
 		
 		////////////////////////////////////////////////////////
@@ -56,12 +52,11 @@ package com.distriqt.extension.jobscheduler
 		
 		//
 		// Singleton variables
-		private static var _instance				: JobScheduler;
-		private static var _shouldCreateInstance	: Boolean = false;
+		private static var _instance:JobScheduler;
+		private static var _shouldCreateInstance:Boolean = false;
 		
-		protected var _extensionId			: String = "";
-		protected var _extensionIdNumber	: int = -1;
-		
+		protected var _extensionId:String = "";
+		protected var _extensionIdNumber:int = -1;
 		
 		
 		////////////////////////////////////////////////////////
@@ -77,14 +72,13 @@ package com.distriqt.extension.jobscheduler
 		
 		private static function createInstance():void
 		{
-			if(_instance == null)
+			if (_instance == null)
 			{
-				_shouldCreateInstance = true; 
+				_shouldCreateInstance = true;
 				_instance = new JobScheduler();
 				_shouldCreateInstance = false;
 			}
 		}
-		
 		
 		
 		////////////////////////////////////////////////////////
@@ -105,7 +99,7 @@ package com.distriqt.extension.jobscheduler
 		}
 		
 		
-		public static function init( key:String="" ):void
+		public static function init( key:String = "" ):void
 		{
 			createInstance();
 		}
@@ -153,17 +147,15 @@ package com.distriqt.extension.jobscheduler
 		}
 		
 		
-		
 		////////////////////////////////////////////////////////
 		//	INTERNALS
 		//
-		
 		
 		
 		////////////////////////////////////////////////////////
 		//	EVENT HANDLERS
 		//
 		
-
+		
 	}
 }

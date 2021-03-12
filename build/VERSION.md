@@ -1,1 +1,1 @@
-| com.distriqt.JobScheduler | 1.0.019 |  |  |
+| com.distriqt.JobScheduler | 1.0.022 |  |  |
