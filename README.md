@@ -1,6 +1,6 @@
 built by [distriqt //](https://airnativeextensions.com) 
 
-![](images/hero.png)
+![](https://raw.githubusercontent.com/distriqt/ANE-JobScheduler/master/images/hero.png)
 
 # JobScheduler
 
