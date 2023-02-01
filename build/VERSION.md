@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.JobScheduler | 1.0.24 |  |  |
+| com.distriqt.JobScheduler | 1.1.0 |  |  |

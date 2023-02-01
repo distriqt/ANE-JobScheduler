@@ -8,10 +8,10 @@
  *                           \/ 
  * http://distriqt.com
  *
- * @brief  		Is Supported function implementation for this ANE
- * @author 		Michael Archbold (https://github.com/marchbold)
- * @created		Jan 19, 2012
- * @copyright	http://distriqt.com/copyright/license.txt
+ * @brief Is Supported function implementation for this ANE
+ * @author Michael Archbold (https://github.com/marchbold)
+ * @created Jan 19, 2012
+ * @copyright http://distriqt.com/copyright/license.txt
  *
  */
 package com.distriqt.extension.jobscheduler.functions;
@@ -24,23 +24,23 @@ import com.adobe.fre.FREObject;
 import com.adobe.fre.FREWrongThreadException;
 import com.distriqt.core.utils.FREUtils;
 
-public class IsSupportedFunction implements FREFunction 
+public class IsSupportedFunction implements FREFunction
 {
 
 	@Override
-	public FREObject call( FREContext context, FREObject[] args ) 
+	public FREObject call( FREContext context, FREObject[] args )
 	{
 		FREObject result = null;
 		try
 		{
 			boolean isSupported = false;
-			if (Build.VERSION.SDK_INT >= 14)
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
 			{
 				isSupported = true;
 			}
 			result = FREObject.newObject( isSupported );
 		}
-		catch (FREWrongThreadException e) 
+		catch (FREWrongThreadException e)
 		{
 			FREUtils.handleException( context, e );
 		}

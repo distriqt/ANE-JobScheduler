@@ -30,7 +30,7 @@ public class ScheduleTerminationFunction implements FREFunction
 		FREObject result = null;
 		try
 		{
-			JobSchedulerContext ctx = (JobSchedulerContext)context;
+			JobSchedulerContext ctx = (JobSchedulerContext) context;
 
 			int delay = args[0].getAsInt();
 

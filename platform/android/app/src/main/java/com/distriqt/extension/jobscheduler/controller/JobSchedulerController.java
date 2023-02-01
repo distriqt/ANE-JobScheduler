@@ -36,10 +36,6 @@ public class JobSchedulerController extends ActivityStateListener
 	public static final String TAG = JobSchedulerController.class.getSimpleName();
 
 
-
-
-
-
 	////////////////////////////////////////////////////////////
 	//	VARIABLES
 	//
@@ -58,8 +54,6 @@ public class JobSchedulerController extends ActivityStateListener
 	}
 
 
-
-
 	public void dispose()
 	{
 
@@ -72,32 +66,34 @@ public class JobSchedulerController extends ActivityStateListener
 	}
 
 
-
 	public boolean scheduleTermination( int delay )
 	{
 		Logger.d( TAG, "scheduleTermination( %d )", delay );
 		try
 		{
-			JobScheduler jobScheduler = (JobScheduler)_extContext.getActivity().getSystemService( Context.JOB_SCHEDULER_SERVICE );
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+			{
+				JobScheduler jobScheduler = (JobScheduler) _extContext.getActivity().getSystemService( Context.JOB_SCHEDULER_SERVICE );
 
-			JobInfo.Builder builder = new JobInfo.Builder(
+				JobInfo.Builder builder = new JobInfo.Builder(
 						TerminateAppJobService.TERMINATE_APP_JOB_ID,
-						new ComponentName( _extContext.getActivity(), TerminateAppJobService.class ))
-					.setMinimumLatency( delay )
-					.setOverrideDeadline( delay + 1000 );
+						new ComponentName( _extContext.getActivity(), TerminateAppJobService.class ) )
+						.setMinimumLatency( delay )
+						.setOverrideDeadline( delay + 1000 );
 
-			//PersistableBundle extras = new PersistableBundle();
-			//String workDuration = mDurationTimeEditText.getText().toString();
-			//if (TextUtils.isEmpty(workDuration)) {
-			//	workDuration = "1";
-			//}
-			//extras.putLong(WORK_DURATION_KEY, Long.valueOf(workDuration) * 1000);
-			//
-			//builder.setExtras(extras);
+				//PersistableBundle extras = new PersistableBundle();
+				//String workDuration = mDurationTimeEditText.getText().toString();
+				//if (TextUtils.isEmpty(workDuration)) {
+				//	workDuration = "1";
+				//}
+				//extras.putLong(WORK_DURATION_KEY, Long.valueOf(workDuration) * 1000);
+				//
+				//builder.setExtras(extras);
 
-			int result = jobScheduler.schedule( builder.build() );
+				int result = jobScheduler.schedule( builder.build() );
 
-			return result == JobScheduler.RESULT_SUCCESS;
+				return result == JobScheduler.RESULT_SUCCESS;
+			}
 		}
 		catch (Exception e)
 		{
@@ -112,9 +108,12 @@ public class JobSchedulerController extends ActivityStateListener
 		Logger.d( TAG, "cancelTermination()" );
 		try
 		{
-			JobScheduler jobScheduler = (JobScheduler)_extContext.getActivity().getSystemService( Context.JOB_SCHEDULER_SERVICE );
-			jobScheduler.cancel( TerminateAppJobService.TERMINATE_APP_JOB_ID );
-			return true;
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+			{
+				JobScheduler jobScheduler = (JobScheduler) _extContext.getActivity().getSystemService( Context.JOB_SCHEDULER_SERVICE );
+				jobScheduler.cancel( TerminateAppJobService.TERMINATE_APP_JOB_ID );
+				return true;
+			}
 		}
 		catch (Exception e)
 		{

@@ -1,0 +1,30 @@
+
+### Extension IDs
+
+The following should be added to your `extensions` node in your application descriptor to identify all the required ANEs in your application:
+
+```xml
+<extensions>
+    <extensionID>com.distriqt.JobScheduler</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+</extensions>
+```
+
+
+## Android 
+
+Add the following additions to your manifest additions. 
+
+In particular you need to add the `TerminateAppJobService` inside your application node. 
+
+```xml
+<application>
+
+    <service
+        android:name="com.distriqt.extension.jobscheduler.services.TerminateAppJobService"
+        android:permission="android.permission.BIND_JOB_SERVICE"
+        android:exported="true" />
+
+</application>
+```
+

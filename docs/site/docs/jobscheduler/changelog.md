@@ -1,5 +1,12 @@
 
 
+###### 2023.02.01 [v1.1.0]
+
+```
+feat(airpackage): update to support latest Core extension with major Android / iOS updates
+```
+
+
 ###### 2021.12.06 [v1.0.24]
 
 ```

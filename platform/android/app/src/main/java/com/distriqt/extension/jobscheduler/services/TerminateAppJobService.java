@@ -15,13 +15,16 @@
  */
 package com.distriqt.extension.jobscheduler.services;
 
+import android.annotation.TargetApi;
 import android.app.job.JobParameters;
 import android.app.job.JobScheduler;
 import android.app.job.JobService;
 import android.content.Context;
+import android.os.Build;
 
 import com.distriqt.extension.jobscheduler.utils.Logger;
 
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class TerminateAppJobService extends JobService
 {
 	////////////////////////////////////////////////////////////
@@ -31,7 +34,6 @@ public class TerminateAppJobService extends JobService
 	public static final String TAG = TerminateAppJobService.class.getSimpleName();
 
 	public static final int TERMINATE_APP_JOB_ID = 4323;
-
 
 
 	////////////////////////////////////////////////////////////
@@ -45,7 +47,7 @@ public class TerminateAppJobService extends JobService
 		try
 		{
 			// Cancel this job
-			JobScheduler jobScheduler = (JobScheduler)this.getSystemService( Context.JOB_SCHEDULER_SERVICE );
+			JobScheduler jobScheduler = (JobScheduler) this.getSystemService( Context.JOB_SCHEDULER_SERVICE );
 			jobScheduler.cancel( TERMINATE_APP_JOB_ID );
 
 

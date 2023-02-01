@@ -30,7 +30,7 @@ public class CancelTerminationFunction implements FREFunction
 		FREObject result = null;
 		try
 		{
-			JobSchedulerContext ctx = (JobSchedulerContext)context;
+			JobSchedulerContext ctx = (JobSchedulerContext) context;
 
 			boolean success = ctx.controller().cancelTermination();
 
@@ -38,7 +38,7 @@ public class CancelTerminationFunction implements FREFunction
 		}
 		catch (Exception e)
 		{
-			Errors.handleException(e);
+			Errors.handleException( e );
 		}
 		return result;
 	}
